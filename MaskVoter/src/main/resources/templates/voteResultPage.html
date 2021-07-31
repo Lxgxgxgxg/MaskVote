@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>投票</title>
+    <link rel="stylesheet" th:href="@{/css/votePage.css}">
+</head>
+<body>
+    
+    <div class="main">
+        <div class="decisionResult" data-desc="表决结果页面">
+            <div class="waitingInner">
+                <p class="mainTitle">表决信息</p>
+                <div class="voteInfo">
+                    <div><span class="title">表决事项：</span> <span th:text="${voteAffairStr}"></span></div>
+                    <div><span class="title">发布日期：</span> <span th:text="${voteStartTime}"></span></div>
+                    <div><span class="title">截至日期：</span> <span th:text="${voteEndTime}"></span></div>
+                    <div><span class="title">表决状态：</span> <span>已结束</span></div>
+                    <div><span class="title">投票人数：</span> <span th:text="${voteNum}">4人</span></div>
+                </div>
+            </div>
+            <div class="waitingInner">
+                <p class="mainTitle">表决结果</p>
+                <table>
+                    <tr>
+                        <th>候选项</th><th>得票结果</th>
+                    </tr>
+                    <tr>
+                        <td>是</td><td th:text="${vote1Result}">***</td>
+                    </tr>
+                    <tr>
+                        <td>否</td><td th:text="${vote2Result}">***</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script th:src="@{/js/jquery-3.4.1.min.js}"></script>
+    <script th:src="@{/js/votePage.js}"></script>
+</body>
+</html>

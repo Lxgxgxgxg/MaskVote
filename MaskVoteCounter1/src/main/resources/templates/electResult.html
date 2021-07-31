@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>计票员页面</title>
+    <link rel="stylesheet" th:href="@{/css/countPage.css}">
+</head>
+<body>
+
+    <div class="main">
+        <div class="countPage">
+            <div class="voteItem">
+                <p class="mainTitle">选举信息</p>
+                <div class="selectLine">
+                    <label>
+                        <span class="itemChose">项目选择</span>
+<!--                        <select>-->
+<!--                            <option value ="1">1 大学生一年级一班班长选举</option>-->
+<!--&lt;!&ndash;                            <option value ="2">2 大学生一年级二班班长选举</option>&ndash;&gt;-->
+<!--                        </select>-->
+                        <span th:text="${electAffairStr}"></span>
+                    </label>
+<!--                    <div class="beginCount">开始计票</div>-->
+                </div>
+                <p class="countInfo">
+                    <span class="itemInfo"><span class="title">发布日期： </span><span th:text="${electStartTime}"></span></span>
+                    <span class="itemInfo"><span class="title">截止日期： </span><span th:text="${electEndTime}"></span></span>
+                </p>
+                <p class="countInfo">
+                    <span class="itemInfo"><span class="title">选举状态： </span><span>已结束</span></span>
+                    <span class="itemInfo"><span class="title">投票人数： </span><span th:text="${electNum}"></span></span>
+                </p>
+            </div>
+            <div class="voteItem">
+                <p class="mainTitle">选举结果</p>
+                <table>
+                    <tr>
+                        <th>候选人</th><th>姓名</th><th>得票结果</th>
+                    </tr>
+                    <tr>
+                        <td>No.1</td><td>1号候选人</td><td th:text="${vote1Result}"></td>
+                    </tr>
+                    <tr>
+                        <td>No.2</td><td>2号候选人</td><td th:text="${vote2Result}"></td>
+                    </tr>
+                    <tr>
+                        <td>No.3</td><td>3号候选人</td><td th:text="${vote3Result}"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="actionArea">
+                <button class="beginVoteCount" id="beginVote"><a style="display: block;margin: 0 auto; background-color:#009688; color: #FFFFFF">选举结果上链</a></button>
+            </div>
+        </div>
+    </div>
+
+    <script th:src="@{/js/jquery3.6.js}"></script>
+    <script th:src="@{/js/countPage.js}"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>计票员页面</title>
+    <link rel="stylesheet" th:href="@{/css/countPage.css}">
+</head>
+<body>
+
+    <div class="main">
+        <div class="countPage">
+            <div class="voteItem">
+                <p class="mainTitle">选举信息</p>
+                <div class="selectLine">
+                    <label>
+                        <span class="itemChose">项目描述</span>
+<!--                        <select>-->
+<!--                            <option value ="1" >1 大学生一年级一班班长选举</option>-->
+<!--&lt;!&ndash;                            <option value ="2">2 大学生一年级二班班长选举</option>&ndash;&gt;-->
+<!--                        </select>-->
+                        <span th:text="${electAffairStr}"></span>
+                    </label>
+<!--                    <div class="beginCount" id="beginElect">开始计票</div>-->
+<!--                    <button class="beginElectCount" id="beginElect">开始计票</button>-->
+                </div>
+                <p class="countInfo">
+                    <span class="itemInfo"><span class="title">发布日期： </span><span th:text="${electStartTime}"></span></span>
+                    <span class="itemInfo"><span class="title">截止日期： </span><span th:text="${electEndTime}"></span></span>
+                </p>
+                <p class="countInfo">
+                    <span class="itemInfo"><span class="title">选举状态： </span><span>正在进行</span></span>
+                    <span class="itemInfo"><span class="title">投票人数： </span><span th:text="${electNum}">4人</span></span>
+                </p>
+            </div>
+            <textarea id="result" cols="30" rows="8" placeholder="后端传输计票的信息"></textarea>
+            <div class="actionArea">
+                <div class="beginCount" id="beginElect"><a style="display: block;margin: 0 auto; background-color:#009688; color: #FFFFFF">开始计票</a></div>
+                <div class="beginCount" id="countSelfResult"><a style="display: block;margin: 0 auto; background-color:#009688; color: #FFFFFF">计算中间变量</a></div>
+                <div class="beginCount"><a style="display: block;margin: 0 auto; background-color:#009688; color: #FFFFFF" href="electResult" >查看选举结果</a></div>
+            </div>
+        </div>
+    </div>
+
+    <script th:src="@{/js/jquery3.6.js}"></script>
+    <script th:src="@{/js/countPage.js}"></script>
+</body>
+</html>

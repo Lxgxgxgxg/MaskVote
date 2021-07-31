@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>投票</title>
+    <link rel="stylesheet" th:href="@{/css/votePage.css}">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+
+</head>
+<body onload="countTime()">
+
+
+    <div class="main">
+        <div class="votePage" data-desc="选举页面">
+            <div class="voteItem">
+                <p class="mainTitle">选举事项</p>
+                <div class="dateContainer">
+                    <div><span class="title">选举事项：</span> <span th:text="${electAffairStr}"></span></div>
+                    <div><span class="title">发布日期：</span> <span th:text="${electStartTime}"></span></div>
+                    <div><span class="title">倒计时：</span>
+                            <span id="_d">00</span>
+                            <span id="_h">00</span>
+                            <span id="_m">00</span>
+                            <span id="_s">00</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="elect_form" th:action="@{/electWaitPage}" method="post">
+                <div class="votePerson">
+<!--                    <label>-->
+<!--                    <form class="elect_form" th:action="@{/electWaitPage}" method="post">-->
+                        <input name="election" type="radio" value="一"><span>1号候选人</span></input>
+<!--                    </label>-->
+<!--                    <label>-->
+                        <input name="election" type="radio" value="二"><span>2号候选人</span></input>
+<!--                    </label>-->
+<!--                    <label>-->
+                        <input name="election" type="radio" value="三"><span>3号候选人</span></input>
+<!--                    </label>-->
+                </div>
+<!--                <div class="actionBtn">确定</div>-->
+                <input style="display: block;margin: 0 auto; background-color:#009688; color: #FFFFFF" id="anNiu" class="actionBtn" type="submit"></input>
+            </form>
+
+
+
+        </div>
+    </div>
+
+    <script th:src="@{/js/jquery-3.4.1.min.js}"></script>
+    <script th:src="@{/js/votePage.js}"></script>
+    <script th:src="@{/js/layui.all.js}"></script>
+
+    <div class="endTime1">
+        <p id="remainTime" th:text="${electEndTime}" type="color:white">2021/05/19 08:56:12</p>
+    </div>
+
+<script>
+    function countTime() {
+        //获取当前时间
+        var date = new Date();
+        var now = date.getTime();
+        //设置截止时间
+        // var str="2021/6/23 12:00:00";
+        var str = document.getElementById('remainTime');
+        console.log(str);
+        var endDate = new Date(str.innerText);
+        var end = endDate.getTime();
+
+        //时间差
+        var leftTime = end-now;
+        //定义变量 d,h,m,s保存倒计时的时间
+        var d,h,m,s;
+        if (leftTime>=0) {
+            d = Math.floor(leftTime/1000/60/60/24);
+            h = Math.floor(leftTime/1000/60/60%24);
+            m = Math.floor(leftTime/1000/60%60);
+            s = Math.floor(leftTime/1000%60);
+
+        }else {
+            d = Math.floor(0);
+            h = Math.floor(0);
+            m = Math.floor(0);
+            s = Math.floor(0);
+            document.getElementById("anNiu").disabled=true;
+        }
+        //将倒计时赋值到div中
+        console.log(d)
+        console.log(h)
+        console.log(m)
+        console.log(s)
+        document.getElementById("_d").innerHTML = d+"天";
+        document.getElementById("_h").innerHTML = h+"时";
+        document.getElementById("_m").innerHTML = m+"分";
+        document.getElementById("_s").innerHTML = s+"秒";
+        //递归每秒调用countTime方法，显示动态时间效果
+        setTimeout(countTime,1000);
+
+    }
+</script>
+</body>
+</html>

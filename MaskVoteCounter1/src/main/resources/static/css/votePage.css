@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hide{
+    display: none !important;
+}
+.header{
+    height: 75px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+}
+.header .logoArea{
+    box-sizing: border-box;
+    width: 130px;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    padding-left: 30px;
+    padding-top: 2px;
+}
+.header .logoArea img{
+    width: 70px;
+    height: 70px;
+}
+.header .voteText{
+    flex: 1 1 auto;
+    font-size: 30px;
+    line-height: 74px;
+    padding-left: 30px;
+}
+
+.header .tuichu{
+    flex: 1 1 auto;
+    font-size: 18px;
+    line-height: 74px;
+    padding-left: 1300px;
+}
+
+.leftSlider{
+    float: left;
+    width: 130px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: center;
+    height: calc(100vh - 75px);
+}
+.leftSlider img{
+    width: 70px;
+    height: 70px;
+}
+.leftBtn{
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    cursor: pointer;
+
+}
+.active{
+    background-color: #e6e6e6;
+}
+.main{
+    margin-left: 140px;
+    padding: 20px;
+}
+
+.voteMain{
+    display: flex;
+    justify-content: center;
+}
+.voteMain > div{
+    line-height: 50px;
+    background-color: #cac0c0;
+    cursor: pointer;
+    margin-right: 50px;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+.voteItem, .votePerson, .waitingInner{
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 2px 2px 4px -2px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 25px 10px;
+    margin-bottom: 20px;
+}
+.mainTitle{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.dateContainer{
+    line-height: 25px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+.dateContainer > div{
+    margin-right: 30px;
+}
+.dateContainer .title{
+    font-weight: bolder;
+}
+.votePerson > label{
+    font-size: 18px;
+    margin: 15px;
+}
+.votePerson input{
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    position: relative;
+    top: 2px;
+}
+.actionBtn{
+    width: 100px;
+    height: 36px;
+    line-height: 30px;
+    border-radius: 4px;
+    color: rgba(16, 16, 16, 100);
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 100);
+    cursor: pointer;
+}
+.voteInfo{
+    font-size: 18px;
+    line-height: 30px;
+    width: 400px;
+    text-align: left;
+    margin: 0 auto;
+}
+.voteInfoChecked > label{
+    font-size: 18px;
+    margin: 15px;
+}
+.voteInfoChecked input{
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    position: relative;
+    top: 2px;
+}
+.mainTitleSub{
+    font-size: 20px;
+    text-align: center;
+    margin: 15px 0 10px;
+}
+table{
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+th{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+td{
+    padding-top: 5px;
+}

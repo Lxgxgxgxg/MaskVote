@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+}
+.hide{
+    display: none;
+}
+.loginBoxContainer{
+    margin: 0 auto;
+    width: 1024px;
+    height: 768px;
+}
+.loginTitle{
+    line-height: 100px;
+    font-size: 30px;
+    border-bottom: 1px solid black;
+    margin-bottom: 50px;
+}
+.loginBox{
+    display: flex;
+    justify-content: center;
+}
+.loginBox .logoImg, .loginBox .formBox{
+    width: 344px;
+    height: 438px;
+}
+.loginBox .logoImg{
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginBox .logoImg img{
+   width: 238px;
+    height: 243px;
+}
+.loginBox .formBox{
+    border-radius: 10px;
+    border: 1px solid rgba(187, 187, 187, 100);
+    text-align: center;
+}
+.loginBox .formBox .title{
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 220px;
+}
+.loginBox .formBox .title .voteTitle{
+    width: 130px;
+    height: 50px;
+    margin-right: 20px;
+    /*background-image: url("images/voteblue.png");*/
+    background-size: 100% 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/*.active1{*/
+/*    background-image: url("images/voteblue.png") !important;*/
+/*}*/
+/*.loginBox .formBox .title .countTitle{*/
+/*    width: 130px;*/
+/*    height: 50px;*/
+/*    background-image: url("images/votewhite02.png");*/
+/*    background-size: 100% 100%;*/
+/*    border-bottom-left-radius: 5px;*/
+/*    border-bottom-right-radius: 5px;*/
+/*}*/
+/*.active2{*/
+/*    background-image: url("images/votered.png") !important;*/
+/*}*/
+.voteBox input{
+    width: 213px;
+    height: 46px;
+    font-size: 16px;
+}
+.voteBox button{
+    width: 88px;
+    height: 48px;
+}
+.actions{
+    margin-bottom: 40px;
+}
+.loginBtn{
+    width: 314px;
+    height: 46px;
+    line-height: 46px;
+    color: white;
+    background-color: #3AAC59;
+    border-radius: 4px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.countBox{
+    padding-top: 86px;
+}
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>投票</title>
+    <link rel="stylesheet" th:href="@{/css/votePage.css}">
+</head>
+<body onload="countTime()">
+
+    <div class="main">
+        <div class="decisionPage" data-desc="表决页面">
+            <div class="voteItem">
+                <p class="mainTitle">表决事项</p>
+                <div class="dateContainer">
+                    <div><span class="title">表决事项：</span> <span th:text="${voteAffairStr}"></span></div>
+                    <div><span class="title">发布日期：</span> <span th:text="${voteStartTime}"></span></div>
+                    <div><span class="title">倒计时：</span>
+                        <span id="_d">00</span>
+                        <span id="_h">00</span>
+                        <span id="_m">00</span>
+                        <span id="_s">00</span>
+                    </div>
+                </div>
+            </div>
+            <form class="vote_form" th:action="@{/voteWaitPage}" method="post">
+                <div class="votePerson">
+                    <label>
+                        <input name="vote" type="radio" value="1" /><span>是</span>
+                    </label>
+                    <label>
+                        <input name="vote" type="radio" value="0" /><span>否</span>
+                    </label>
+                </div>
+<!--                <div class="actionBtn">确定</div>-->
+                <button style="display: block;margin: 0 auto; background-color:#009688; color: #FFFFFF" class="actionBtn" type="submit">确定</button>
+            </form>
+        </div>
+    </div>
+
+    <script th:src="@{/js/jquery-3.4.1.min.js}"></script>
+    <script th:src="@{/js/votePage.js}"></script>
+
+    <div class="endTime1">
+        <p id="remainTime" th:text="${voteEndTime}" type="color:white"></p>
+    </div>
+
+    <script>
+        function countTime() {
+            //获取当前时间
+            var date = new Date();
+            var now = date.getTime();
+            //设置截止时间
+            // var str="2021/6/23 12:00:00";
+            var str = document.getElementById('remainTime');
+            console.log(str);
+            var endDate = new Date(str.innerText);
+            var end = endDate.getTime();
+
+            //时间差
+            var leftTime = end-now;
+            //定义变量 d,h,m,s保存倒计时的时间
+            var d,h,m,s;
+            if (leftTime>=0) {
+                d = Math.floor(leftTime/1000/60/60/24);
+                h = Math.floor(leftTime/1000/60/60%24);
+                m = Math.floor(leftTime/1000/60%60);
+                s = Math.floor(leftTime/1000%60);
+
+            }else {
+                d = Math.floor(0);
+                h = Math.floor(0);
+                m = Math.floor(0);
+                s = Math.floor(0);
+                document.getElementById("anNiu").disabled=true;
+            }
+            //将倒计时赋值到div中
+            console.log(d)
+            console.log(h)
+            console.log(m)
+            console.log(s)
+            document.getElementById("_d").innerHTML = d+"天";
+            document.getElementById("_h").innerHTML = h+"时";
+            document.getElementById("_m").innerHTML = m+"分";
+            document.getElementById("_s").innerHTML = s+"秒";
+            //递归每秒调用countTime方法，显示动态时间效果
+            setTimeout(countTime,1000);
+
+        }
+    </script>
+</body>
+</html>

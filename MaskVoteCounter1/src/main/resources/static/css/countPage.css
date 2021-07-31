@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hide{
+    display: none !important;
+}
+
+.active{
+    background-color: #e6e6e6;
+}
+
+.main{
+    margin-left: 0px;
+    padding: 20px;
+}
+
+.countMain{
+    display: flex;
+    justify-content: center;
+}
+.countMain > div{
+    line-height: 50px;
+    background-color: #cac0c0;
+    cursor: pointer;
+    margin-right: 50px;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+.voteItem{
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 2px 2px 4px -2px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 25px 10px;
+    margin-bottom: 20px;
+}
+.mainTitle{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.selectLine{
+    line-height: 30px;
+}
+.selectLine select{
+    width: 550px;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+.itemChose{
+    font-size: 18px;
+    font-weight: bolder;
+    color: rgba(16, 16, 16, 100);
+    margin-right: 15px;
+}
+.beginCount{
+    display: inline-block;
+    width: 106px;
+    height: 30px;
+    border-radius: 4px;
+    color: rgba(16, 16, 16, 100);
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 100);
+    margin-left: 15px;
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+}
+.selectLine{
+    margin-bottom: 25px;
+}
+.countInfo{
+    width: 770px;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-start;
+}
+.itemInfo{
+    width: 50%;
+    text-align: left;
+}
+.title{
+    font-size: 16px;
+    font-weight: bolder;
+}
+textarea{
+    width: 100%;
+    height: 340px;
+    border: 1px solid rgba(187, 187, 187, 100);
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+}
+.actionArea{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+.actionArea > div{
+    width: 133px;
+    line-height: 30px;
+    border-radius: 4px;
+    color: rgba(16, 16, 16, 100);
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 100);
+    margin: 0 50px;
+    cursor: pointer;
+}
+table{
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+th{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+td{
+    padding-top: 5px;
+}
+
+a {
+    font-size: 16px;
+    text-decoration:none
+}
+
+
+

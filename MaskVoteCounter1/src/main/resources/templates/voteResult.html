@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>计票员页面</title>
+    <link rel="stylesheet" th:href="@{/css/countPage.css}">
+</head>
+<body>
+
+    <div class="main">
+        <div class="countPage">
+            <div class="voteItem">
+                <p class="mainTitle">表决信息</p>
+                <div class="selectLine">
+                    <label>
+                        <span class="itemChose">项目选择</span>
+<!--                        <select>-->
+<!--                            <option value ="1">1 一年级一班明天是否聚餐</option>-->
+<!--&lt;!&ndash;                            <option value ="2">2 一年级二班明天是否聚餐</option>&ndash;&gt;-->
+<!--                        </select>-->
+                        <span th:text="${voteAffairStr}"></span>
+                    </label>
+<!--                    <div class="beginCount" style="">开始计票</div>-->
+<!--                    <button class="beginCount" name="begin">开始计票</button>-->
+                </div>
+                <p class="countInfo">
+                    <span class="itemInfo"><span class="title">发布日期： </span><span th:text="${voteStartTime}"></span></span>
+                    <span class="itemInfo"><span class="title">截止日期： </span><span th:text="${voteEndTime}"></span></span>
+                </p>
+                <p class="countInfo">
+                    <span class="itemInfo"><span class="title">表决状态： </span><span>已结束</span></span>
+                    <span class="itemInfo"><span class="title">表决人数： </span><span th:text="${voteNum}"></span></span>
+                </p>
+            </div>
+            <div class="voteItem">
+                <p class="mainTitle">表决结果</p>
+                <table>
+                    <tr>
+                        <th>候选项</th><th>得票结果</th>
+                    </tr>
+                    <tr>
+                        <td>是</td><td th:text="${vote1AgreeResult}"></td>
+                    </tr>
+                    <tr>
+                        <td>否</td><td th:text="${vote1DisagreeResult}"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="actionArea">
+                <div class="beginCount" id="beginInvokeVote" style="display: block;margin: 0 auto; background-color:#009688; color: #FFFFFF"><a>表决结果上链</a></div>
+            </div>
+        </div>
+    </div>
+
+    <script th:src="@{/js/jquery3.6.js}"></script>
+    <script th:src="@{/js/countPage.js}"></script>
+</body>
+</html>

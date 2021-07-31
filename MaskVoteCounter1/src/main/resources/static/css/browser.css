@@ -1,0 +1,99 @@
+html,
+body {
+    height: 100%
+}
+
+.body {
+    position: relative;
+    height: 100%;
+    /* bottom: 0px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: violet;
+}
+
+.body .chainState {
+    position: absolute;
+    top: 50px;
+    width: 1000px;
+    padding: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.body .box {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: #009688;
+    /* float: left; */
+    margin-left: 0px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.body .box p {
+    position: absolute;
+    top: 10px;
+    height: 30px;
+}
+
+.body .box .num {
+    position: absolute;
+    bottom: 55px;
+    height: 30px;
+    width: 130px;
+    color: whitesmoke;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.body #chainItem {
+    position: absolute;
+    width: 1000px;
+    height: 350px;
+    bottom: 50px;
+    background-color: lightgrey;
+}
+
+.body #reset p {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 25px;
+    color: lightslategray;
+}
+
+.body #reset button {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    width: 50px;
+    background-color: lightgrey;
+    border: none;
+    cursor: pointer;
+}
+
+.body .block-table {
+    position: absolute;
+    width: 1000px;
+    height: 300px;
+    bottom: 0px;
+    /* background-color: lightpink; */
+}
+
+#item th {
+    position: relative;
+    top: 0px;
+    height: 30px;
+    background-color: lightseagreen;
+}
+
+#Content th {
+    height: 30px;
+    background-color: lightslategray;
+}

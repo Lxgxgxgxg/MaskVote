@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>计票员页面</title>
+    <link rel="stylesheet" th:href="@{/css/countPage.css}">
+</head>
+<body>
+    <div class="header">
+        <div class="logoArea">
+            <img th:src="@{/images/logo.png}" alt="">
+        </div>
+        <div class="voteText">计票</div>
+        <div class="tuichu" id="out">
+            <ul>
+                <li><a href="login">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="leftSlider">
+        <div class="leftBtn pencilBox active">
+            <img th:src="@{/images/pencil1.png}" alt="" class="pencil">
+            <p>计票</p>
+        </div>
+        <div class="leftBtn">
+            <img th:src="@{/images/result.png}" alt="">
+            <p>结果</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="countMain" data-desc="计票主页">
+            <div class="voteMater"><a style="text-decoration: none; color: #000000" href="electCount">选举事务</div>
+            <div class="disMater"><a style="text-decoration: none; color: #000000" href="voteCount">表决事务</div>
+        </div>
+    </div>
+
+    <script th:src="@{/js/jquery3.6.js}"></script>
+    <script th:src="@{/js/countPage.js}"></script>
+</body>
+</html>

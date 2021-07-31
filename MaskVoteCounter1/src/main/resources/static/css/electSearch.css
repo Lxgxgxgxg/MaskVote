@@ -1,0 +1,29 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.hezi{
+    margin: auto;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    right: 200px;
+    bottom: 0;
+}
+
+/*p{*/
+
+/*    !*position: absolute;*!*/
+/*    !*margin: auto;*!*/
+/*    text-align:center;*/
+
+/*}*/
+
+.layui-btn{
+    display: block;
+    /*width: 80px;*/
+    margin: 0 auto;
+}

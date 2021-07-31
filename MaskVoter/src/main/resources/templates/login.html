@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+<div class="loginBoxContainer">
+    <h3 class="loginTitle">登录</h3>
+    <div class="loginBox">
+        <div class="logoImg">
+            <img th:src="@{/images/biglogo.png}" alt="logo">
+        </div>
+        <div class="formBox">
+            <div class="title">
+                <span class="voteTitle"><img th:src="@{/images/voteblue.png}"></span>
+            </div>
+            <div class="voteBox">
+                <label style="color: #1CAF9A" th:text="${msg}"></label>
+                <form th:action="@{/login}" method="post">
+                <div class="actions">
+
+                    <input type="text" name="sk" placeholder="输入用户的密钥">
+                    <button id="submit">提交</button>
+                </div>
+                </form>
+<!--                <div class="loginBtn" id="voteRegister"><a>创建新的用户</a></div>-->
+                <button class="loginBtn" id="voteRegister"><a style="display: block;margin: 0 auto; background-color:#009688; color: #FFFFFF">创建新用户</a></button>
+            </div>
+            <div class="countBox hide">
+                <div class="loginBtn" id="login">登录</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/jquery3.6.js}"></script>
+<script th:src="@{/js/login.js}"></script>
+</body>
+</html>
